@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.html">
+
+    <title>Document</title>
+</head>
+<body align="center" style="margin-top: 200px;"><br><br> 
+    <span>First Name *</span>
+    <input type="text" style="margin-left: 24px;" name="fname" id="fname" placeholder="Enter here" required ><br><br> 
+
+    <span>Middle Name *</span>
+    <input type="text" style="margin-left: 10px;" name="mname" id="mname" placeholder="Enter here" ><br><br> 
+
+    <span>Last Name *</span>
+    <input type="text" style="margin-left: 28px;" name="lname" id="lname" placeholder="Enter here" ><br><br> 
+
+    <span>Password *</span>
+    <input type="text" style="margin-left: 37px;" name="pass" id="pass" placeholder="Enter here" required ><br><br><br>
+
+    <div style="margin-left: 120px;">
+    <button id="bff"  id="bff" style="background: blue; color:whitesmoke ;"> SUBMIT </button>
+    <button style="margin-left: 50px;"> Cancle </button>
+
+
+    <script>
+        document.getElementById("bff").addEventListener("click", function() {
+            // Get form field values
+            var fname = document.getElementById('fname').value;
+            var mname = document.getElementById('mname').value;
+            var lname = document.getElementById('lname').value;
+            var pass = document.getElementById('pass').value;
+            
+            // Check if any field is empty
+            if (fname === ''|| mname ===  '' || lname === '' || pass === '') {
+                alert("All fields are required!");
+            } else {
+                // Redirect to the "login.html" page
+                window.location.href = "login.html";
+            }
+        });
+    </script>
+    
+    </div>
+    <!-- <script>
+        // Add an event listener to the button
+        document.getElementById("redirectButton").addEventListener("click", function() {
+            // Redirect to the "login.html" page
+            window.location.href = "login.html";
+        });
+    </script> -->
+    
+    
+</body>
+</html>
